@@ -64,7 +64,8 @@ module.exports = {
     ],
     "modules": [
       "./node_modules",
-      "./node_modules"
+      "./node_modules",
+      path.resolve('./app'),
     ]
   },
   "resolveLoader": {
