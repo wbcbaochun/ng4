@@ -13,6 +13,7 @@ import { InMemoryDataService }  from './in-memory-data.service';
 
 import { HeroDetailComponent } from './hero/hero-detail.component';
 import { HeroesComponent } from './hero/heroes.component';
+import { HeroSearchComponent } from './hero/hero-search.component';
 import { HeroService } from './hero/services/hero.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
@@ -28,6 +29,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     AppComponent,
     HeroDetailComponent,
     HeroesComponent,
+    HeroSearchComponent,
     DashboardComponent
   ],
   providers: [
