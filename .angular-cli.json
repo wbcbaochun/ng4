@@ -10,7 +10,8 @@
       "outDir": "dist",
       "assets": [
         "assets",
-        "favicon.ico"
+        "favicon.ico",
+        "./node_modules/bootstrap-sass/assets/fonts"
       ],
       "index": "index.html",
       "main": "main.ts",
@@ -20,7 +21,7 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.scss"
+        "styles/styles.scss"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
@@ -54,6 +55,10 @@
   "defaults": {
     "styleExt": "scss",
     "component": {
+      "spec": false
+    },
+    "service": {
+      "spec": false
     }
   }
 }
