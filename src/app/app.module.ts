@@ -1,8 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
 import { HttpModule }    from '@angular/http';
+import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -20,11 +21,12 @@ import { HeroFormComponent } from './hero-form/hero-form.component';
 
 @NgModule({
   imports: [
+    AppRoutingModule,
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     HttpModule,
-    InMemoryWebApiModule.forRoot(InMemoryDataService),
-    AppRoutingModule
+    InMemoryWebApiModule.forRoot(InMemoryDataService)
   ],
   declarations: [
     AppComponent,

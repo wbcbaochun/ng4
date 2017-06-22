@@ -3,11 +3,29 @@ import { OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Hero } from './models/hero';
 import { HeroService} from './services/hero.service';
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition
+} from '@angular/animations';
 
 @Component({
-    selector: 'my-heroes',
     templateUrl: './heroes.component.html',
     styleUrls: ['./heroes.component.scss'],
+    animations: [
+      trigger('flyInOut', [
+        state('in', style({transform: 'translateX(0)'})),
+        transition('void => *', [
+          style({transform: 'translateX(-100%)'}),
+          animate(100)
+        ]),
+        transition('* => void', [
+          animate(100, style({transform: 'translateX(100%)'}))
+        ])
+      ])
+    ],
     providers: []
 })
 export class HeroesComponent implements OnInit {
